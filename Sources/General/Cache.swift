@@ -49,7 +49,7 @@ public class Cache {
     private let decoder = PropertyListDecoder()
     
     public static func defaultDiskCachePathClosure(_ cacheName: String) -> String {
-        let dstPath = NSSearchPathForDirectoriesInDomains(.cachesDirectory, .userDomainMask, true).first!
+        let dstPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first!
         return (dstPath as NSString).appendingPathComponent(cacheName)
     }
     
